@@ -1,152 +1,248 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <title>Ian Odundo | Personal Website</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+<head>
+  <title>Ian Odundo | Personal Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/flexslider.css">
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
+  <link rel="icon" href="images/profile.jpg" sizes="16x16" type="image/png">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/flexslider.css">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
 
-  </head>
-  <body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700" rel="stylesheet">
 
+  <!--spinner style-->
+  <style>
+    .spinner-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #2c3e50;
+      z-index: 999999;
+    }
 
+    .spinner {
+      position: absolute;
+      top: 35%;
+      left: 48%;
+      margin: 100px auto;
+      width: 50px;
+      height: 40px;
+      text-align: center;
+      font-size: 10px;
+    }
 
-    <nav class="navbar navbar-expand-lg site-navbar navbar-light bg-light" id="pb-navbar">
+    .spinner>div {
+      background-color: rgb(255, 255, 255);
+      height: 100%;
+      width: 6px;
+      display: inline-block;
 
-      <div class="container">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+      animation: sk-stretchdelay 1.2s infinite ease-in-out;
+    }
 
-        <a class="navbar-brand" href="index.html">Poppinjay13</a>
-        <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample09">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#section-home">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#section-about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#section-services">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="#section-portfolio">Portfolio</a></li>
-            <li class="nav-item"><a class="nav-link" href="#section-resume">Resume</a></li>
-            <!--li class="nav-item"><a class="nav-link" href="#section-blog">Blog</a></li-->
-            <li class="nav-item"><a class="nav-link" href="#section-contact">Contact</a></li>
-          </ul>
+    .spinner .rect2 {
+      -webkit-animation-delay: -1.1s;
+      animation-delay: -1.1s;
+    }
+
+    .spinner .rect3 {
+      -webkit-animation-delay: -1.0s;
+      animation-delay: -1.0s;
+    }
+
+    .spinner .rect4 {
+      -webkit-animation-delay: -0.9s;
+      animation-delay: -0.9s;
+    }
+
+    .spinner .rect5 {
+      -webkit-animation-delay: -0.8s;
+      animation-delay: -0.8s;
+    }
+
+    @-webkit-keyframes sk-stretchdelay {
+
+      0%,
+      40%,
+      100% {
+        -webkit-transform: scaleY(0.4)
+      }
+
+      20% {
+        -webkit-transform: scaleY(1.0)
+      }
+    }
+
+    @keyframes sk-stretchdelay {
+
+      0%,
+      40%,
+      100% {
+        transform: scaleY(0.4);
+        -webkit-transform: scaleY(0.4);
+      }
+
+      20% {
+        transform: scaleY(1.0);
+        -webkit-transform: scaleY(1.0);
+      }
+    }
+  </style>
+</head>
+
+<body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
+  <!--CSS Spinner-->
+  <div class="spinner-wrapper">
+    <div class="spinner">
+      <div class="rect1"></div>
+      <div class="rect2"></div>
+      <div class="rect3"></div>
+      <div class="rect4"></div>
+      <div class="rect5"></div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg site-navbar navbar-light bg-light" id="pb-navbar">
+
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09"
+        aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <a class="navbar-brand" href="index.html">Poppinjay13</a>
+      <div class="collapse navbar-collapse justify-content-md-end" id="navbarsExample09">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#section-home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section-about">About</a></li>
+          <!--li class="nav-item"><a class="nav-link" href="#section-services">Services</a></li-->
+          <li class="nav-item"><a class="nav-link" href="#section-portfolio">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section-resume">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section-contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="site-hero" style="background-image: url(images/bar1.jpg);" id="section-home"
+    data-stellar-background-ratio="0.5">
+    <div class="container">
+      <div class="row intro-text align-items-center justify-content-center">
+        <div class="col-md-10 text-center">
+          <h1 class="site-heading site-animate">Hey, I'm <strong>Ian Odundo</strong></h1>
+          <p class="lead site-subheading mb-4 site-animate">A Full-Stack Software Engineer and UI/UX designer. </p>
+          <p><a href="#section-about" class="smoothscroll btn btn-primary px-4 py-3">More On Me</a></p>
         </div>
       </div>
-    </nav>
+    </div>
+  </section> <!-- section -->
 
 
-
-
-    <section class="site-hero" style="background-image: url(images/bar1.jpg);" id="section-home" data-stellar-background-ratio="0.5">
-      <div class="container">
-        <div class="row intro-text align-items-center justify-content-center">
-          <div class="col-md-10 text-center">
-            <h1 class="site-heading site-animate">Hey, I'm <strong>Ian Odundo</strong></h1>
-            <p class="lead site-subheading mb-4 site-animate">A Full-Stack Software Engineer and UI/UX designer. </p>
-            <p><a href="#section-about" class="smoothscroll btn btn-primary px-4 py-3">More On Me</a></p>
+  <section class="site-section" id="section-about">
+    <div class="container">
+      <div class="row mb-5 align-items-center">
+        <div class="col-lg-5 pr-lg-5 mb-5 mb-lg-0">
+          <img src="images/profile.jpg" alt="Image placeholder" class="img-fluid">
+        </div>
+        <div class="col-lg-7 pl-lg-5">
+          <div class="section-heading">
+            <h2>About <strong>Me</strong></h2>
           </div>
+          <p class="lead">I am based in Nairobi with the flexibilty of working remotely to provide software solutions.
+          </p>
+          <p class="mb-5">I am skilled at providing software to solve problems or alternatively, solving problems in
+            existing solutions.</p>
+          <p>
+            <a href="#section-contact" class="btn btn-primary px-4 py-2 btn-sm smoothscroll">Hire Me</a>
+            <a href="assets/Ian Odundo CV.pdf" class="btn btn-secondary px-4 py-2 btn-sm">Download CV</a>
+          </p>
         </div>
       </div>
-    </section> <!-- section -->
-
-
-    <section class="site-section" id="section-about">
-      <div class="container">
-        <div class="row mb-5 align-items-center">
-          <div class="col-lg-5 pr-lg-5 mb-5 mb-lg-0">
-            <img src="images/profile.jpg" alt="Image placeholder" class="img-fluid">
-          </div>
-          <div class="col-lg-7 pl-lg-5">
-            <div class="section-heading">
-              <h2>About <strong>Me</strong></h2>
-            </div>
-            <p class="lead">I am based in Nairobi with the flexibilty of working remotely to provide software solutions.</p>
-            <p class="mb-5">I am skilled at providing software to solve problems or alternatively, solving problems in existing solutions.</p>
-            <p>
-              <a href="#section-contact" class="btn btn-primary px-4 py-2 btn-sm smoothscroll">Hire Me</a>
-              <a href="assets/Ian Odundo CV.pdf" class="btn btn-secondary px-4 py-2 btn-sm">Download CV</a>
-            </p>
+      <div class="row pt-5">
+        <div class="col-md-3 mb-3">
+          <div class="section-heading">
+            <h2>My <strong>Skills</strong></h2>
           </div>
         </div>
-        <div class="row pt-5">
-          <div class="col-md-3 mb-3">
-            <div class="section-heading">
-              <h2>My <strong>Skills</strong></h2>
+        <div class="col-md-9">
+          <div class="skill">
+            <h3>UI/UX Design</h3>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 98%" aria-valuenow="98" aria-valuemin="0"
+                aria-valuemax="100">
+                <span>98%</span>
+              </div>
             </div>
           </div>
-          <div class="col-md-9">
-            <div class="skill">
-              <h3>UI/UX Design</h3>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 98%" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100">
-                  <span>98%</span>
-                </div>
+
+          <div class="skill">
+            <h3>Web Front-End Development</h3>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0"
+                aria-valuemax="100">
+                <span>95%</span>
               </div>
             </div>
+          </div>
 
-            <div class="skill">
-              <h3>Web Front-End Development</h3>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                  <span>95%</span>
-                </div>
+          <div class="skill">
+            <h3>Web Back-End Development</h3>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 97%" aria-valuenow="97" aria-valuemin="0"
+                aria-valuemax="100">
+                <span>97%</span>
               </div>
             </div>
+          </div>
 
-            <div class="skill">
-              <h3>Web Back-End Development</h3>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 97%" aria-valuenow="97" aria-valuemin="0" aria-valuemax="100">
-                  <span>97%</span>
-                </div>
+          <div class="skill">
+            <h3>Mobile App Development</h3>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 99%" aria-valuenow="99" aria-valuemin="0"
+                aria-valuemax="100">
+                <span>99%</span>
               </div>
             </div>
+          </div>
 
-            <div class="skill">
-              <h3>Mobile App Development</h3>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 99%" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100">
-                  <span>99%</span>
-                </div>
+          <div class="skill">
+            <h3>Server Administration</h3>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0"
+                aria-valuemax="100">
+                <span>92%</span>
               </div>
             </div>
+          </div>
 
-            <div class="skill">
-              <h3>Server Administration</h3>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">
-                  <span>92%</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="skill">
-              <h3>Machine Learning & Python</h3>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 87%" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100">
-                  <span>87%</span>
-                </div>
+          <div class="skill">
+            <h3>Machine Learning & Python</h3>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 87%" aria-valuenow="87" aria-valuemin="0"
+                aria-valuemax="100">
+                <span>87%</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!--section class="site-section border-top pb-0"  id="section-services">
+  <!--section class="site-section border-top pb-0"  id="section-services">
       <div class="container">
 
         <div class="row mb-4">
@@ -224,393 +320,425 @@
       </div>
     </section-->
 
-
-    <!--section class="site-section" id="section-features">
-      <div class="container">
-        <div class="row site-section">
-          <div class="col-md-8">
-            <p><img src="images/laptop_1.jpg" alt="" class="img-fluid"></p>
-          </div>
-          <div class="col-md-4">
-            <h3 class="mb-3">Big Benefits for Small Business</h3>
-            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-
-            <ul class="site-list">
-              <li class="site-check">Pointing has no control</li>
-              <li class="site-check">A small river named Duden flows</li>
-              <li class="site-check">Roasted parts of sentences fly into your mouth</li>
-            </ul>
-          </div>
+  <section class="site-section" id="section-portfolio">
+    <div class="container">
+      <div class="row">
+        <div class="section-heading text-center col-md-12">
+          <h2>Featured <strong>Portfolio</strong></h2>
         </div>
-
-        <div class="row">
-          <div class="col-md-8 order-md-2">
-            <p><img src="images/laptop_1.jpg" alt="" class="img-fluid"></p>
-          </div>
-          <div class="col-md-4 order-md-1">
-            <h3 class="mb-3">All in One Place</h3>
-            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-
-            <ul class="site-list">
-              <li class="site-check">Pointing has no control</li>
-              <li class="site-check">A small river named Duden flows</li>
-              <li class="site-check">Roasted parts of sentences fly into your mouth</li>
-            </ul>
-          </div>
-        </div>
-
-
       </div>
-    </section-->
-
-
-    <section class="site-section" id="section-portfolio">
-      <div class="container">
-        <div class="row">
-          <div class="section-heading text-center col-md-12">
-              <h2>Featured <strong>Portfolio</strong></h2>
-            </div>
-        </div>
-        <div class="filters">
-          <ul>
-            <li class="active" data-filter="*">All</li>
-            <li data-filter=".website">Websites</li>
-            <li data-filter=".mockup">Mockups</li>
-            <li data-filter=".android">Android</li>
-            <!--li data-filter=".desktop">Desktop</li-->
+      <div class="filters">
+        <ul>
+          <li class="active" data-filter="*">All</li>
+          <li data-filter=".website">Websites</li>
+          <li data-filter=".mockup">Mockups</li>
+          <li data-filter=".android">Android</li>
+          <!--li data-filter=".desktop">Desktop</li-->
         </ul>
-    </div>
-    <div class="filters-content">
-      <div class="row grid">
-
-        <div class="single-portfolio col-sm-4 all android">
-          <div class="relative">
-            <div class="thumb">
-              <div class="overlay overlay-bg"></div>
-              <img class="image img-fluid" src="images/Thrive.png" alt="">
-            </div>
-            <a href="images/Thrive.png" class="img-pop-up">
-              <div class="middle">
-                <div class="text align-self-center d-flex"><img src="images/click.png" alt="" style="width: 50px; height: 50px;"></div>
-              </div>
-            </a>
-          </div>
-          <div class="p-inner">
-            <h4>Thrive Solutions E-commerce App</h4>
-            <div class="cat">Android</div>
-          </div>
-        </div>
-
-        <div class="single-portfolio col-sm-4 all mockup">
-          <div class="relative">
-            <div class="thumb">
-              <div class="overlay overlay-bg"></div>
-              <img class="image img-fluid" src="images/Traveller.png" alt="">
-            </div>
-            <a href="images/Traveller.png" class="img-pop-up">
-              <div class="middle">
-                <div class="text align-self-center d-flex"><img src="images/click.png" alt="" style="width: 50px; height: 50px;"></div>
-              </div>
-            </a>
-          </div>
-          <div class="p-inner">
-            <h4>Traveller Companion App Concept</h4>
-            <div class="cat">mockup</div>
-          </div>
-        </div>
-
-        <div class="single-portfolio col-sm-4 all mockup android">
-          <div class="relative">
-            <div class="thumb">
-              <div class="overlay overlay-bg"></div>
-              <img class="image img-fluid" src="images/Bisco.png" alt="Bisco">
-            </div>
-            <a href="images/Bisco.png" class="img-pop-up">
-              <div class="middle">
-                <div class="text align-self-center d-flex"><img src="images/click.png" alt="" style="width: 50px; height: 50px;"></div>
-              </div>
-            </a>
-          </div>
-          <div class="p-inner">
-            <h4>Bisco Ride Sharing Concept</h4>
-            <div class="cat">Mockup / Android</div>
-          </div>
-        </div>
-
-        <div class="single-portfolio col-sm-4 all mockup android">
-          <div class="relative">
-            <div class="thumb">
-              <div class="overlay overlay-bg"></div>
-              <img class="image img-fluid" src="images/Filmato.png" alt="">
-            </div>
-            <a href="images/Filmato.png" class="img-pop-up">
-              <div class="middle">
-                <div class="text align-self-center d-flex"><img src="images/click.png" alt="" style="width: 50px; height: 50px;"></div>
-              </div>
-            </a>
-          </div>
-          <div class="p-inner">
-            <h4>Filmato Seat Booking Application</h4>
-            <div class="cat">Mockup / Android</div>
-          </div>
-        </div>
-
-        <div class="single-portfolio col-sm-4 all website">
-          <div class="relative">
-            <div class="thumb">
-              <div class="overlay overlay-bg"></div>
-              <img class="image img-fluid" src="images/Valentines.png" alt="">
-            </div>
-            <a href="https://github.com/poppinjay13/valentines" class="img-pop-up">
-              <div class="middle">
-                <div class="text align-self-center d-flex"><img src="images/click.png" alt="" style="width: 50px; height: 50px;"></div>
-              </div>
-            </a>
-          </div>
-          <div class="p-inner">
-            <h4>Valentine's Cake House Redesign</h4>
-            <div class="cat">Website</div>
-          </div>
-        </div>
-
-        <div class="single-portfolio col-sm-4 all website">
-          <div class="relative">
-            <div class="thumb">
-              <div class="overlay overlay-bg"></div>
-              <img class="image img-fluid" src="images/Bespoke.png" alt="">
-            </div>
-            <a href="https://bespokebranding.co.ke" class="img-pop-up">
-              <div class="middle">
-                <div class="text align-self-center d-flex"><img src="images/click.png" alt="" style="width: 50px; height: 50px;"></div>
-              </div>
-            </a>
-          </div>
-          <div class="p-inner">
-            <h4>Bespoke Branding</h4>
-            <div class="cat">Website</div>
-          </div>
-        </div>
-
       </div>
-    </div>
-    </div>
-    </section>
-    <!-- .section -->
+      <div class="filters-content">
+        <div class="row grid">
 
-    <section class="site-section bg-light " id="section-resume">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 mb-5">
-            <div class="section-heading text-center">
-              <h2>My <strong>Resume</strong></h2>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <h2 class="mb-5">Education</h2>
-            <div class="resume-item mb-4">
-              <span class="date"><span class="icon-calendar"></span> July 2017 - Present</span>
-              <h3>Bachelor of Science in Informatics and Computer Science</h3>
-              <p>Currently a third year ICS student due to graduate in early 2021.</p>
-              <span class="school">Strathmore University</span>
-            </div>
-
-            <div class="resume-item mb-4">
-              <span class="date"><span class="icon-calendar"></span> April 2017</span>
-              <h3>Certificate in Computer Applications</h3>
-              <p>Took a course and passed the CCA certification exams.</p>
-              <span class="school">Strathmore University</span>
-            </div>
-
-            <div class="resume-item mb-4">
-              <span class="date"><span class="icon-calendar"></span> January-March 2017</span>
-              <h3>International Computer Driving License</h3>
-              <p>Took a course and passed the ICDL certification exams</p>
-              <span class="school">Strathmore University</span>
-            </div>
-
-            <div class="resume-item mb-4">
-              <span class="date"><span class="icon-calendar"></span> March 2017</span>
-              <h3>Information Technology Essentials</h3>
-              <p>Completed a course on IT basics and fundamentals.</p>
-              <span class="school">CISCO Networking Academy</span>
-            </div>
-
-            <div class="resume-item mb-4">
-              <span class="date"><span class="icon-calendar"></span> 2012 - 2016</span>
-              <h3>Kenya Certificate of Secondary Education</h3>
-              <p>Completed my High School Education with a mean grade of A-</p>
-              <span class="school">Maseno School</span>
-            </div>
-
-          </div>
-          <div class="col-md-6">
-
-
-            <h2 class="mb-5">Experience</h2>
-
-            <div class="resume-item mb-4">
-              <span class="date"><span class="icon-calendar"></span> April 2019 - Present</span>
-              <h3>Android Development</h3>
-              <p>I am working to provide an e-commerce software solution.</p>
-              <span class="school">Remote</span>
-            </div>
-
-            <div class="resume-item mb-4">
-              <span class="date"><span class="icon-calendar"></span> January 2019 - March 2019</span>
-              <h3>Community Based Attachment</h3>
-              <p>I was working under the matron to provide services to inpatients and outpatients at the facility.</p>
-              <span class="school">Texas Cancer Centre</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> <!-- .section -->
-
-    <!--section class="site-section" id="section-blog">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 mb-5">
-            <div class="section-heading text-center">
-              <h2>Blog on <strong>Medium</strong></h2>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-sm-6 col-lg-4 mb-4">
-            <div class="blog-entry">
-              <a href="#"><img src="images/post_1.jpg" alt="Image placeholder" class="img-fluid"></a>
-              <div class="blog-entry-text">
-                <h3><a href="#">Creative Product Designer From Facebook</a></h3>
-                <p class="mb-4">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-
-                <div class="meta">
-                  <a href="#"><span class="icon-calendar"></span> Aug 7, 2018</a>
-                  <a href="#"><span class="icon-bubble"></span> 5 Comments</a>
+          <div class="single-portfolio col-sm-4 all android">
+            <div class="relative">
+              <a href="images/Thrive.png" class="img-pop-up">
+                <div class="thumb">
+                  <div class="overlay overlay-bg"></div>
+                  <img class="image img-fluid" src="images/Thrive.png" alt="">
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-6 col-lg-4 mb-4">
-            <div class="blog-entry">
-              <a href="#"><img src="images/post_2.jpg" alt="Image placeholder" class="img-fluid"></a>
-              <div class="blog-entry-text">
-                <h3><a href="#">Creative Product Designer From Facebook</a></h3>
-                <p class="mb-4">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-
-                <div class="meta">
-                  <a href="#"><span class="icon-calendar"></span> Aug 7, 2018</a>
-                  <a href="#"><span class="icon-bubble"></span> 5 Comments</a>
+                <div class="middle">
+                  <div class="text align-self-center d-flex"><img src="images/click.png" alt=""
+                      style="width: 50px; height: 50px;"></div>
                 </div>
-              </div>
+              </a>
+            </div>
+            <div class="p-inner">
+              <h4>Thrive Solutions</h4>
+              <div class="cat">Android</div>
             </div>
           </div>
 
-          <div class="col-sm-6 col-lg-4 mb-4">
-            <div class="blog-entry">
-              <a href="#"><img src="images/post_3.jpg" alt="Image placeholder" class="img-fluid"></a>
-              <div class="blog-entry-text">
-                <h3><a href="#">Creative Product Designer From Facebook</a></h3>
-                <p class="mb-4">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-
-                <div class="meta">
-                  <a href="#"><span class="icon-calendar"></span> Aug 7, 2018</a>
-                  <a href="#"><span class="icon-bubble"></span> 5 Comments</a>
+          <div class="single-portfolio col-sm-4 all android">
+            <div class="relative">
+              <a href="images/Bloom.png" class="img-pop-up">
+                <div class="thumb">
+                  <div class="overlay overlay-bg"></div>
+                  <img class="image img-fluid" src="images/Bloom.png" alt="">
                 </div>
-              </div>
+                <div class="middle">
+                  <div class="text align-self-center d-flex"><img src="images/click.png" alt=""
+                      style="width: 50px; height: 50px;"></div>
+                </div>
+              </a>
+            </div>
+            <div class="p-inner">
+              <h4>Bloom</h4>
+              <div class="cat">Android</div>
+            </div>
+          </div>
+
+          <div class="single-portfolio col-sm-4 all mockup">
+            <div class="relative">
+              <a href="images/Traveller.png" class="img-pop-up">
+                <div class="thumb">
+                  <div class="overlay overlay-bg"></div>
+                  <img class="image img-fluid" src="images/Traveller.png" alt="">
+                </div>
+                <div class="middle">
+                  <div class="text align-self-center d-flex"><img src="images/click.png" alt=""
+                      style="width: 50px; height: 50px;"></div>
+                </div>
+              </a>
+            </div>
+            <div class="p-inner">
+              <h4>Traveller Companion</h4>
+              <div class="cat">mockup</div>
+            </div>
+          </div>
+
+          <div class="single-portfolio col-sm-4 all android">
+            <div class="relative">
+              <a href="images/Grind.png" class="img-pop-up">
+                <div class="thumb">
+                  <div class="overlay overlay-bg"></div>
+                  <img class="image img-fluid" src="images/Grind.png" alt="">
+                </div>
+                <div class="middle">
+                  <div class="text align-self-center d-flex"><img src="images/click.png" alt=""
+                      style="width: 50px; height: 50px;"></div>
+                </div>
+              </a>
+            </div>
+            <div class="p-inner">
+              <h4>Grind</h4>
+              <div class="cat">Android</div>
+            </div>
+          </div>
+
+          <div class="single-portfolio col-sm-4 all mockup android">
+            <div class="relative">
+              <a href="images/Bisco.png" class="img-pop-up">
+                <div class="thumb">
+                  <div class="overlay overlay-bg"></div>
+                  <img class="image img-fluid" src="images/Bisco.png" alt="Bisco">
+                </div>
+                <div class="middle">
+                  <div class="text align-self-center d-flex"><img src="images/click.png" alt=""
+                      style="width: 50px; height: 50px;"></div>
+                </div>
+              </a>
+            </div>
+            <div class="p-inner">
+              <h4>Bisco Ride Sharing</h4>
+              <div class="cat">Mockup / Android</div>
+            </div>
+          </div>
+
+          <div class="single-portfolio col-sm-4 all android">
+            <div class="relative">
+              <a href="images/DateSafi.png" class="img-pop-up">
+                <div class="thumb">
+                  <div class="overlay overlay-bg"></div>
+                  <img class="image img-fluid" src="images/DateSafi.png" alt="">
+                </div>
+                <div class="middle">
+                  <div class="text align-self-center d-flex"><img src="images/click.png" alt=""
+                      style="width: 50px; height: 50px;"></div>
+                </div>
+              </a>
+            </div>
+            <div class="p-inner">
+              <h4>DateSafi</h4>
+              <div class="cat">Mockup</div>
+            </div>
+          </div>
+
+          <div class="single-portfolio col-sm-4 all mockup android">
+            <div class="relative">
+              <a href="images/Filmato.png" class="img-pop-up">
+                <div class="thumb">
+                  <div class="overlay overlay-bg"></div>
+                  <img class="image img-fluid" src="images/Filmato.png" alt="">
+                </div>
+                <div class="middle">
+                  <div class="text align-self-center d-flex"><img src="images/click.png" alt=""
+                      style="width: 50px; height: 50px;"></div>
+                </div>
+              </a>
+            </div>
+            <div class="p-inner">
+              <h4>Filmato Seat Booking</h4>
+              <div class="cat">Mockup / Android</div>
+            </div>
+          </div>
+
+          <div class="single-portfolio col-sm-4 all website">
+            <div class="relative">
+              <a href="images/Valentines.png" class="img-pop-up">
+                <div class="thumb">
+                  <div class="overlay overlay-bg"></div>
+                  <img class="image img-fluid" src="images/Valentines.png" alt="">
+                </div>
+                <div class="middle">
+                  <div class="text align-self-center d-flex"><img src="images/click.png" alt=""
+                      style="width: 50px; height: 50px;"></div>
+                </div>
+              </a>
+            </div>
+            <div class="p-inner">
+              <h4>Valentine's Cake House Redesign</h4>
+              <div class="cat">Website</div>
+            </div>
+          </div>
+
+          <div class="single-portfolio col-sm-4 all website">
+            <div class="relative">
+              <a href="images/Bespoke.png" class="img-pop-up">
+                <div class="thumb">
+                  <div class="overlay overlay-bg"></div>
+                  <img class="image img-fluid" src="images/Bespoke.png" alt="">
+                </div>
+                <div class="middle">
+                  <div class="text align-self-center d-flex"><img src="images/click.png" alt=""
+                      style="width: 50px; height: 50px;"></div>
+                </div>
+              </a>
+            </div>
+            <div class="p-inner">
+              <h4>Bespoke Branding</h4>
+              <div class="cat">Website</div>
+            </div>
+          </div>
+
+          <div class="single-portfolio col-sm-4 all website">
+            <div class="relative">
+              <a href="images/Giftbox.png" class="img-pop-up">
+                <div class="thumb">
+                  <div class="overlay overlay-bg"></div>
+                  <img class="image img-fluid" src="images/Giftbox.png" alt="">
+                </div>
+                <div class="middle">
+                  <div class="text align-self-center d-flex"><img src="images/click.png" alt=""
+                      style="width: 50px; height: 50px;"></div>
+                </div>
+              </a>
+            </div>
+            <div class="p-inner">
+              <h4>GiftBox</h4>
+              <div class="cat">Website</div>
+            </div>
+          </div>
+
+          <div class="single-portfolio col-sm-4 all website">
+            <div class="relative">
+              <a href="images/Neutron.png" class="img-pop-up">
+                <div class="thumb">
+                  <div class="overlay overlay-bg"></div>
+                  <img class="image img-fluid" src="images/Neutron.png" alt="">
+                </div>
+                <div class="middle">
+                  <div class="text align-self-center d-flex"><img src="images/click.png" alt=""
+                      style="width: 50px; height: 50px;"></div>
+                </div>
+              </a>
+            </div>
+            <div class="p-inner">
+              <h4>GiftBox</h4>
+              <div class="cat">Website</div>
             </div>
           </div>
 
         </div>
       </div>
-    </section-->
+    </div>
+  </section>
+  <!-- .section -->
 
-    <section class="site-section bg-light" id="section-contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 mb-5">
-            <div class="section-heading text-center">
-              <h2>Want To <strong>Start Working</strong> With Me?</h2>
+  <section class="site-section bg-light " id="section-resume">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 mb-5">
+          <div class="section-heading text-center">
+            <h2>My <strong>Resume</strong></h2>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h2 class="mb-5">Certification</h2>
+          <div class="resume-item mb-4">
+            <span class="date"><span class="icon-calendar"></span> July 2017 - Present</span>
+            <h3>Bachelor of Science in Informatics and Computer Science</h3>
+            <p>Currently a fourth year BICS student due to graduate in early 2021.</p>
+            <span class="school">Strathmore University</span>
+          </div>
+
+          <div class="resume-item mb-4">
+            <span class="date"><span class="icon-calendar"></span> Febuary 2020</span>
+            <h3>IBM Cybersecurity</h3>
+            <p>Took a course and passed the IBM Cybersecurity certification exams.</p>
+            <span class="school">IBM Acclaim</span>
+          </div>
+
+          <div class="resume-item mb-4">
+            <span class="date"><span class="icon-calendar"></span> April 2017</span>
+            <h3>Certificate in Computer Applications</h3>
+            <p>Took a course and passed the CCA certification exams.</p>
+            <span class="school">Strathmore University</span>
+          </div>
+
+          <div class="resume-item mb-4">
+            <span class="date"><span class="icon-calendar"></span> January-March 2017</span>
+            <h3>International Computer Driving License</h3>
+            <p>Took a course and passed the ICDL certification exams</p>
+            <span class="school">Strathmore University</span>
+          </div>
+
+          <div class="resume-item mb-4">
+            <span class="date"><span class="icon-calendar"></span> March 2017</span>
+            <h3>Information Technology Essentials</h3>
+            <p>Completed a course on IT basics and fundamentals.</p>
+            <span class="school">CISCO Networking Academy</span>
+          </div>
+
+          <div class="resume-item mb-4">
+            <span class="date"><span class="icon-calendar"></span> 2012 - 2016</span>
+            <h3>Kenya Certificate of Secondary Education</h3>
+            <p>Completed my High School Education with a mean grade of A-</p>
+            <span class="school">Maseno School</span>
+          </div>
+
+        </div>
+        <div class="col-md-6">
+
+          <h2 class="mb-5">Experience</h2>
+
+          <div class="resume-item mb-4">
+            <span class="date"><span class="icon-calendar"></span> January 2020 - March 2020</span>
+            <h3>Associate Developer</h3>
+            <p>Worked as an associate android and php dev as well as a UI/UX designer to provide software solutions for
+              my Work-Based Learning</p>
+            <span class="school">Techxers Kenya Ltd</span>
+          </div>
+
+          <div class="resume-item mb-4">
+            <span class="date"><span class="icon-calendar"></span> April 2019 - November 2019</span>
+            <h3>Android Development</h3>
+            <p>I developed an e-commerce software solution for the compant that connects farmers and investors, allowing
+              them to track and monitor progress and receive returns on investments.</p>
+            <span class="school">Thrive Solutions</span>
+          </div>
+
+          <div class="resume-item mb-4">
+            <span class="date"><span class="icon-calendar"></span> January 2019 - March 2019</span>
+            <h3>Community Based Attachment</h3>
+            <p>I was working under the matron to provide services to inpatients and outpatients at the facility.</p>
+            <span class="school">Texas Cancer Centre</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="site-section bg-light" id="section-contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 mb-5">
+          <div class="section-heading text-center">
+            <h2>Want To <strong>Start Working</strong> With Me?</h2>
+          </div>
+        </div>
+
+        <div class="col-md-7 mb-5 mb-md-0">
+          <form action="mailto:thisian13@gmail.com" class="site-form" method="GET" enctype="text/plain">
+            <h3 class="mb-5">Get In Touch</h3>
+            <div class="form-group">
+              <input type="text" name="Name" class="form-control px-3 py-4" placeholder="Your Name">
             </div>
-          </div>
-
-          <div class="col-md-7 mb-5 mb-md-0">
-            <form action="mailto:thisian13@gmail.com" class="site-form" method="GET" enctype="text/plain">
-              <h3 class="mb-5">Get In Touch</h3>
-              <div class="form-group">
-                <input type="text" name="Name" class="form-control px-3 py-4" placeholder="Your Name">
-              </div>
-              <div class="form-group">
-                <input type="subject" name="Subject" class="form-control px-3 py-4" placeholder="Your Subject">
-              </div>
-              <div class="form-group">
-                <input type="phone" name="Phone" class="form-control px-3 py-4" placeholder="Your Phone">
-              </div>
-              <div class="form-group mb-5">
-                <textarea name="Message" class="form-control px-3 py-4"cols="30" rows="10" placeholder="Write a Message"></textarea>
-              </div>
-              <div class="form-group">
-                <input type="submit" class="btn btn-primary  px-4 py-3" value="Send Message">
-              </div>
-            </form>
-          </div>
-          <div class="col-md-5 pl-md-5">
-            <h3 class="mb-5">My Contact Details</h3>
-            <ul class="site-contact-details">
-              <li>
-                <span class="text-uppercase">Email</span>
-                thisian13@gmail.com
-              </li>
-              <li>
-                <span class="text-uppercase">Phone</span>
-                +254 719 653 520
-              </li>
-              <li>
-                <span class="text-uppercase">Address</span>
-                Nairobi, Kenya <br>
-              </li>
-            </ul>
-          </div>
+            <div class="form-group">
+              <input type="subject" name="Subject" class="form-control px-3 py-4" placeholder="Your Subject">
+            </div>
+            <div class="form-group">
+              <input type="phone" name="Phone" class="form-control px-3 py-4" placeholder="Your Phone">
+            </div>
+            <div class="form-group mb-5">
+              <textarea name="Message" class="form-control px-3 py-4" cols="30" rows="10"
+                placeholder="Write a Message"></textarea>
+            </div>
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary  px-4 py-3" value="Send Message">
+            </div>
+          </form>
+        </div>
+        <div class="col-md-5 pl-md-5">
+          <h3 class="mb-5">My Contact Details</h3>
+          <ul class="site-contact-details">
+            <li>
+              <span class="text-uppercase">Email</span>
+              thisian13@gmail.com
+            </li>
+            <li>
+              <span class="text-uppercase">Phone</span>
+              +254 719 653 520
+            </li>
+            <li>
+              <span class="text-uppercase">Address</span>
+              Nairobi, Kenya <br>
+            </li>
+          </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-
-    <footer class="site-footer">
-      <div class="container">
-        <div class="row mb-3">
-          <div class="col-md-12 text-center">
-            <p>
-              <a href="https://www.facebook.com/ian.odundo.9" class="social-item"><span class="icon-facebook2"></span></a>
-              <a href="https://twitter.com/civil_ian13" class="social-item"><span class="icon-twitter"></span></a>
-              <a href="https://www.instagram.com/poppin_jay_13" class="social-item"><span class="icon-instagram2"></span></a>
-              <a href="https://www.linkedin.com/in/ian-odundo-793423150" class="social-item"><span class="icon-linkedin2"></span></a>
-              <a href="https://github.com/poppinjay13" class="social-item"><span class="fab fa-github"></span></a>
-            </p>
-          </div>
-        </div>
-        <div class="row">
-            <p class="col-12 text-center">
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | This site is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://poppinjay13.github.io" target="_blank" class="text-primary">poppinjay13</a>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            </p>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row mb-3">
+        <div class="col-md-12 text-center">
+          <p>
+            <a href="https://github.com/poppinjay13" class="social-item"><span class="fab fa-github"></span></a>
+            <a href="https://www.linkedin.com/in/ian-odundo-793423150" class="social-item"><span
+                class="icon-linkedin2"></span></a>
+            <a href="https://twitter.com/odundo_ian" class="social-item"><span class="icon-twitter"></span></a>
+            <a href="https://www.instagram.com/poppin_jay_13" class="social-item"><span
+                class="icon-instagram2"></span></a>
+            <a href="https://www.facebook.com/ian.odundo.9" class="social-item"><span class="icon-facebook2"></span></a>
+          </p>
         </div>
       </div>
-    </footer>
+      <div class="row">
+        <p class="col-12 text-center">
+          Copyright &copy;
+          <script>document.write(new Date().getFullYear());</script> All rights reserved | This site is made with <i
+            class="icon-heart" aria-hidden="true"></i> by <a href="https://poppinjay13.github.io" target="_blank"
+            class="text-primary">poppinjay13</a>
+        </p>
+      </div>
+    </div>
+  </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/esm/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/esm/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
-    <script src="js/vendor/jquery.easing.1.3.js"></script>
-    <script src="js/vendor/jquery.stellar.min.js"></script>
-    <script src="js/vendor/jquery.waypoints.min.js"></script>
+  <script src="js/vendor/jquery.easing.1.3.js"></script>
+  <script src="js/vendor/jquery.stellar.min.js"></script>
+  <script src="js/vendor/jquery.waypoints.min.js"></script>
 
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-    <script src="js/custom.js"></script>
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script src="js/custom.js"></script>
 
-  </body>
+  <!--Spinner jquery-->
+  <script>
+    $(document).ready(function () {
+      //Preloader
+      preloaderFadeOutTime = 500;
+      function hidePreloader() {
+        var preloader = $('.spinner-wrapper');
+        preloader.fadeOut(preloaderFadeOutTime);
+      }
+      hidePreloader();
+    });
+  </script>
+</body>
+
 </html>
