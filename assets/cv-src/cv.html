@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ian Odundo - CV</title>
+<style>
+  @page { size: A4; margin: 0; }
+  :root { --ink:#1f2933; --muted:#52606d; --accent:#2f9e1a; --line:#d9e2ec; --tint:#f0faed; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; }
+  body { font-family: "Segoe UI", Calibri, Arial, sans-serif; color:var(--ink); font-size:9.2pt; line-height:1.38; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .page { width:210mm; height:297mm; padding:11mm 12mm 10mm; position:relative; overflow:hidden; page-break-after:always; }
+  .page:last-child { page-break-after:auto; }
+
+  header { border-bottom:2px solid var(--accent); padding-bottom:6px; margin-bottom:8px; }
+  h1 { margin:0; font-size:23pt; letter-spacing:.3px; line-height:1.1; }
+  .role { color:var(--accent); font-weight:600; font-size:11.5pt; margin-top:1px; }
+  .contact { color:var(--muted); font-size:8.4pt; margin-top:4px; }
+  .contact span + span::before { content:"\00b7"; margin:0 6px; color:var(--accent); font-weight:700; }
+
+  .summary { margin:0 0 8px; }
+  .cols { display:grid; grid-template-columns: 1fr 55mm; gap:0 9mm; }
+  h2 { font-size:9.6pt; text-transform:uppercase; letter-spacing:1.1px; color:var(--accent); margin:0 0 5px; padding-bottom:2px; border-bottom:1px solid var(--line); }
+  section { margin-bottom:9px; }
+
+  .job { margin-bottom:8px; break-inside:avoid; }
+  .job-head { display:flex; justify-content:space-between; align-items:baseline; gap:8px; }
+  .job-title { font-weight:700; font-size:9.8pt; }
+  .job-date { color:var(--muted); font-size:8.4pt; white-space:nowrap; }
+  .job-org { color:var(--muted); font-size:8.6pt; margin-bottom:2px; }
+  .job ul { margin:2px 0 3px; padding-left:13px; }
+  .job li { margin-bottom:1.5px; }
+  .tech { font-size:8.2pt; color:var(--muted); }
+  .tech b { color:var(--ink); font-weight:600; }
+
+  .side h2 { margin-top:0; }
+  .group { margin-bottom:6px; }
+  .group h3 { margin:0 0 2px; font-size:8.6pt; color:var(--ink); }
+  .tags { display:flex; flex-wrap:wrap; gap:2.5px 3px; }
+  .tags span { background:var(--tint); border:1px solid #b9e3ad; border-radius:9px; padding:0 6px; font-size:7.9pt; line-height:1.5; }
+  .side ul { margin:0; padding-left:12px; }
+  .side li { margin-bottom:2px; }
+  .side p { margin:0 0 2px; }
+  .small { font-size:8.3pt; color:var(--muted); }
+  .cert b { font-weight:600; }
+  .proj { display:grid; grid-template-columns:1fr 1fr; gap:3px 14px; }
+  .proj div { font-size:8.8pt; }
+  .proj .small { display:block; }
+  .kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin:0 0 8px; }
+  .kpi { background:var(--tint); border-radius:5px; padding:4px 3px; text-align:center; }
+  .kpi b { display:block; font-size:12.5pt; color:var(--accent); line-height:1.15; }
+  .kpi span { font-size:7.4pt; color:var(--muted); }
+</style>
+</head>
+<body>
+
+<!-- ============ PAGE 1 ============ -->
+<div class="page">
+  <header>
+    <h1>Ian Odundo</h1>
+    <div class="role">AI &amp; Full-Stack Engineer</div>
+    <div class="contact"><span>thisian13@gmail.com</span><span>+254 719 653 520</span><span>Nairobi, Kenya</span><span>poppinjay13.github.io</span><span>linkedin.com/in/ian-odundo</span></div>
+  </header>
+
+  <p class="summary">AI and full-stack engineer with 6+ years building production web, mobile, USSD and payment systems across health, fintech and e-commerce. At AIDS Healthcare Foundation I build and ship global health information systems and AI services (fine-tuned multilingual NLP, LLM integration, RAG) used by about 2,000 people across 49 countries. Comfortable across the stack, from SQL Server data warehousing and payment APIs to polished, localized interfaces, with a strong user-centred design foundation.</p>
+
+  <div class="cols">
+    <main>
+      <section>
+        <h2>Work Experience</h2>
+
+        <div class="job">
+          <div class="job-head"><span class="job-title">Global Applications Developer &middot; UI/UX</span><span class="job-date">06/2024 &ndash; Present</span></div>
+          <div class="job-org">AIDS Healthcare Foundation &middot; Global HMIS, Nairobi, Kenya</div>
+          <ul>
+            <li><b>AI / ML:</b> fine-tuned and self-host an XLM-RoBERTa multilingual sentiment API (Python, Hugging Face, FastAPI); integrated GPT-4o with prompt engineering and structured outputs; built RAG with embeddings and vector search; developed agent and tool-use workflows to automate data triage and reporting.</li>
+            <li><b>Data platform:</b> built the SQL Server data warehouse and led the SQL Server migration (T-SQL stored procedures, views, schema changes); built survey dashboards and data-visualization tools for online and offline use.</li>
+            <li><b>Platform engineering:</b> implemented OAuth2 single sign-on and a localization system serving 27 languages across 49 countries and about 1,300 facilities; built ASP.NET / C# REST APIs and Vue, React and Flutter interfaces.</li>
+            <li><b>Design and delivery:</b> gathered requirements with country teams and HMIS managers; produced wireframes, prototypes and specs in Figma; maintained a shared design system; shipped through Git and CI/CD. Use Claude Code to accelerate development.</li>
+          </ul>
+          <div class="tech"><b>Tech:</b> Python, FastAPI, Hugging Face, GPT-4o, SQL Server, ASP.NET/C#, React, Vue.js, Flutter, OAuth2, Figma, Git</div>
+        </div>
+
+        <div class="job">
+          <div class="job-head"><span class="job-title">Software Engineer</span><span class="job-date">11/2022 &ndash; 11/2023</span></div>
+          <div class="job-org">Prevoir Solutions Informatiques (4C Group)</div>
+          <ul>
+            <li>Designed, built, tested and deployed Java services for <b>4C iNSight</b>, the group's telecoms and fintech platform (BI, fraud and revenue assurance, billing and a mobile-money payment gateway) deployed across 12 countries.</li>
+            <li>Integrated card, mobile-money and bank payment APIs, including ISO 8583 messaging; built event-driven microservices on Kafka and RabbitMQ.</li>
+            <li>Applied PCI-DSS controls: encryption, Spring Security, audit logging. Wrote JUnit unit and integration tests, GitLab CI/CD pipelines, Docker deployments, and technical documentation; built a React SPA; worked in an agile team with Jira and code review.</li>
+          </ul>
+          <div class="tech"><b>Tech:</b> Java, Spring Boot, Spring Security, PostgreSQL, Kafka, RabbitMQ, ISO 8583, React, Docker, GitLab CI/CD, JUnit</div>
+        </div>
+
+        <div class="job">
+          <div class="job-head"><span class="job-title">Android Developer (Project Owner)</span><span class="job-date">02/2022 &ndash; 08/2022</span></div>
+          <div class="job-org">Doctors Live Telehealth &middot; Volunteer, distributed team</div>
+          <ul>
+            <li>Owned the design and build of a telehealth Android app with WebRTC video consultations, real-time chat, Firebase (auth, Firestore, push) and M-Pesa payments.</li>
+            <li>Handled patient data with privacy in mind; designed the UI in Figma; ran testing and Play Store release with a remote team using Git and agile practices.</li>
+          </ul>
+          <div class="tech"><b>Tech:</b> Kotlin, Firebase, WebRTC, Retrofit, M-Pesa Daraja, Figma</div>
+        </div>
+
+        <div class="job">
+          <div class="job-head"><span class="job-title">Software Engineer</span><span class="job-date">02/2021 &ndash; 06/2024</span></div>
+          <div class="job-org">Lakeatts Systems Co. &middot; Remote</div>
+          <ul>
+            <li>Designed, tested and deployed cross-platform products across Android, Flutter and USSD for clients including SDA Church, with push notifications via Firebase.</li>
+            <li>Built Spring Boot / PostgreSQL backends and REST APIs; integrated M-Pesa Daraja, Equity Bank and I&amp;M Bank payments.</li>
+            <li>Administered Linux servers (Apache, Docker), hardened authentication and encryption, ran unit and UI tests with Git CI/CD, and supported clients.</li>
+          </ul>
+          <div class="tech"><b>Tech:</b> Android (Java), Flutter, USSD, Spring Boot, PostgreSQL, Apache, Docker, Figma</div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="side">
+      <section>
+        <h2>Core Skills</h2>
+        <div class="group"><h3>AI &amp; Machine Learning</h3><div class="tags"><span>LLM APIs (GPT-4o)</span><span>Prompt engineering</span><span>RAG &amp; vector search</span><span>AI agents</span><span>Model fine-tuning</span><span>XLM-RoBERTa</span><span>Hugging Face</span><span>Python</span><span>FastAPI</span><span>Claude Code</span></div></div>
+        <div class="group"><h3>Web &amp; Mobile</h3><div class="tags"><span>React</span><span>Vue.js</span><span>ASP.NET / C#</span><span>JavaScript</span><span>HTML5 / CSS3</span><span>PHP / Laravel</span><span>Android (Kotlin, Java)</span><span>Flutter</span><span>i18n</span></div></div>
+        <div class="group"><h3>Backend &amp; Payments</h3><div class="tags"><span>Spring Boot</span><span>REST APIs</span><span>OAuth2 / SSO</span><span>M-Pesa Daraja</span><span>Card &amp; bank APIs</span><span>ISO 8583</span><span>Kafka</span><span>RabbitMQ</span><span>USSD</span></div></div>
+        <div class="group"><h3>Data</h3><div class="tags"><span>SQL Server / T-SQL</span><span>PostgreSQL</span><span>MySQL</span><span>Data warehousing</span><span>Dashboards</span></div></div>
+        <div class="group"><h3>DevOps &amp; Security</h3><div class="tags"><span>Docker</span><span>GitLab CI/CD</span><span>Git</span><span>Linux</span><span>Apache</span><span>PCI-DSS</span><span>Secure coding</span><span>JUnit</span></div></div>
+        <div class="group"><h3>Design &amp; Leadership</h3><div class="tags"><span>Figma</span><span>Adobe XD</span><span>Illustrator</span><span>Design systems</span><span>Prototyping</span><span>Team lead</span><span>Requirements</span><span>Technical writing</span></div></div>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <p><b>BSc Informatics &amp; Computer Science</b></p>
+        <p class="small">Strathmore University<br>07/2017 &ndash; 09/2021<br>Second Class Honours (Upper Division)</p>
+      </section>
+    </aside>
+  </div>
+</div>
+
+<!-- ============ PAGE 2 ============ -->
+<div class="page">
+  <div class="cols">
+    <main>
+      <section>
+        <h2>Work Experience (continued)</h2>
+
+        <div class="job">
+          <div class="job-head"><span class="job-title">Software Developer &middot; UI/UX Designer</span><span class="job-date">01/2020 &ndash; 01/2021</span></div>
+          <div class="job-org">Techxers Kenya Ltd &middot; Nairobi, Kenya</div>
+          <ul>
+            <li>Joined through a work-based learning placement and stayed on as a freelance developer with the team, delivering Android, Flutter and web projects for clients including Neutron IT, CDL and Sahani.</li>
+            <li>Built native Android apps in Java and Kotlin and cross-platform apps in Flutter, using Firebase for push notifications and backend services and consuming REST APIs.</li>
+            <li>Developed Laravel / Lumen REST APIs on MySQL, including M-Pesa Daraja payment flows, and used Git for version control across client projects.</li>
+            <li>Owned the UI/UX workflow: ran requirements sessions with clients, then produced wireframes and prototypes in Figma and Adobe XD, with assets in Illustrator and Photoshop.</li>
+          </ul>
+          <div class="tech"><b>Tech:</b> Android (Java, Kotlin), Flutter, Firebase, Laravel, Lumen, PHP, MySQL, Figma, Adobe XD</div>
+        </div>
+
+        <div class="job">
+          <div class="job-head"><span class="job-title">Lead Software Developer</span><span class="job-date">04/2019 &ndash; 09/2019</span></div>
+          <div class="job-org">Thrive Solutions &middot; Nairobi, Kenya</div>
+          <ul>
+            <li>Led a team of four developers building a mobile e-commerce platform end to end: allocated tasks, planned sprints, reviewed code and kept stakeholders informed.</li>
+            <li>Built the Android app (Java) with Firebase push notifications, M-Pesa Daraja payments, and a product catalogue with image handling and search.</li>
+            <li>Developed the Laravel / Lumen REST API on MySQL and a Vue.js admin web dashboard.</li>
+            <li>Designed the app's UI/UX, managed source control in Git, and set up the servers and deployment.</li>
+          </ul>
+          <div class="tech"><b>Tech:</b> Android (Java), Laravel, Lumen, PHP, MySQL, Vue.js, Firebase, M-Pesa Daraja</div>
+        </div>
+
+        <div class="job">
+          <div class="job-head"><span class="job-title">Freelance Developer &amp; Designer</span><span class="job-date">2018 &ndash; 2020</span></div>
+          <div class="job-org">Self-employed &middot; Nairobi, Kenya &amp; Remote</div>
+          <ul>
+            <li>Delivered web, Android and branding projects for Helima Health, Bespoke Branding, Valentine's Cake House, Giftbox, Tatu City, Jambopay and SDA ECD, managing quoting, delivery and client communication end to end.</li>
+            <li>Built responsive websites with Vue.js, PHP / Laravel, JavaScript, HTML5 / CSS3 and WordPress on MySQL, with SEO and performance optimization.</li>
+            <li>Integrated M-Pesa, card and bank payments, and developed Android apps for client projects.</li>
+            <li>Set up hosting, domains, cPanel and Docker environments for clients.</li>
+            <li>Designed interfaces in Figma and Adobe XD and produced logos and visual identities in Illustrator and Photoshop.</li>
+          </ul>
+          <div class="tech"><b>Tech:</b> Vue.js, PHP, Laravel, WordPress, MySQL, JavaScript, Docker, Android, Adobe XD, Illustrator, Photoshop, Figma</div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="side">
+      <section>
+        <h2>Certificates &amp; Achievements</h2>
+        <p style="margin-bottom:5px"><b>IBM Cybersecurity</b> <span class="small">(2020)</span><br><span class="small">IBM Acclaim</span></p>
+        <p style="margin-bottom:5px"><b>MIT Covid-19 Africa Hackathon</b> <span class="small">(2020)</span><br><span class="small">Presented a tele-health solution</span></p>
+        <p style="margin-bottom:5px"><b>Red Bull Basement</b> <span class="small">(2020)</span><br><span class="small">Presented a ride-share system for Kenya</span></p>
+        <p style="margin-bottom:5px"><b>ICT Conference</b> <span class="small">(2019)</span><br><span class="small">Presented an online tendering system for academic institutions</span></p>
+        <p style="margin-bottom:5px"><b>Cyber Speak / The Hacker Village</b> <span class="small">(2018)</span><br><span class="small">Runner-up: ride-sharing system, 3-day hackathon</span></p>
+        <p style="margin-bottom:5px"><b>Certificate in Computer Applications &amp; ICDL</b> <span class="small">(2017)</span><br><span class="small">Strathmore University</span></p>
+        <p style="margin-bottom:5px"><b>IT Essentials</b> <span class="small">(2017)</span><br><span class="small">Cisco Networking Academy</span></p>
+      </section>
+      <section>
+        <h2>Languages</h2>
+        <p><b>English</b><br><span class="small">Native or bilingual</span></p>
+        <p><b>Kiswahili</b><br><span class="small">Native or bilingual</span></p>
+        <p><b>French</b><br><span class="small">Professional working</span></p>
+      </section>
+      <section>
+        <h2>Interests</h2>
+        <ul><li>Artificial intelligence and machine learning</li><li>UI/UX design</li><li>Robotics</li></ul>
+      </section>
+      <section>
+        <h2>Volunteering</h2>
+        <ul><li>Texas Cancer Centre</li></ul>
+      </section>
+    </aside>
+  </div>
+</div>
+
+</body>
+</html>

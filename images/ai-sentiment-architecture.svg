@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Nunito Sans, Segoe UI, Arial, sans-serif">
+  <rect width="800" height="500" fill="#2c3e50"/>
+  <text x="400" y="62" text-anchor="middle" font-size="30" font-weight="700" fill="#fff">Multilingual Sentiment API</text>
+  <text x="400" y="94" text-anchor="middle" font-size="16" fill="#9fb3c8">Architecture overview (generic)</text>
+
+  <!-- client apps -->
+  <rect x="40" y="170" width="150" height="90" rx="10" fill="#34495e" stroke="#57d131" stroke-width="2"/>
+  <text x="115" y="208" text-anchor="middle" font-size="16" fill="#fff" font-weight="700">Client apps</text>
+  <text x="115" y="232" text-anchor="middle" font-size="13" fill="#9fb3c8">Web / mobile</text>
+
+  <!-- API -->
+  <rect x="250" y="170" width="150" height="90" rx="10" fill="#34495e" stroke="#57d131" stroke-width="2"/>
+  <text x="325" y="208" text-anchor="middle" font-size="16" fill="#fff" font-weight="700">FastAPI</text>
+  <text x="325" y="232" text-anchor="middle" font-size="13" fill="#9fb3c8">Auth + validation</text>
+
+  <!-- model -->
+  <rect x="460" y="170" width="150" height="90" rx="10" fill="#57d131"/>
+  <text x="535" y="208" text-anchor="middle" font-size="16" fill="#1b2a1b" font-weight="700">XLM-RoBERTa</text>
+  <text x="535" y="232" text-anchor="middle" font-size="13" fill="#1b2a1b">Fine-tuned</text>
+
+  <!-- results -->
+  <rect x="670" y="170" width="100" height="90" rx="10" fill="#34495e" stroke="#57d131" stroke-width="2"/>
+  <text x="720" y="208" text-anchor="middle" font-size="16" fill="#fff" font-weight="700">Scores</text>
+  <text x="720" y="232" text-anchor="middle" font-size="13" fill="#9fb3c8">JSON</text>
+
+  <g stroke="#57d131" stroke-width="3" fill="none">
+    <path d="M190 215 H250"/><path d="M400 215 H460"/><path d="M610 215 H670"/>
+  </g>
+  <g fill="#57d131">
+    <polygon points="250,215 240,209 240,221"/><polygon points="460,215 450,209 450,221"/><polygon points="670,215 660,209 660,221"/>
+  </g>
+
+  <!-- training lane -->
+  <rect x="460" y="340" width="150" height="80" rx="10" fill="#34495e" stroke="#9fb3c8" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="535" y="374" text-anchor="middle" font-size="15" fill="#fff" font-weight="700">Training pipeline</text>
+  <text x="535" y="398" text-anchor="middle" font-size="12" fill="#9fb3c8">Hugging Face</text>
+  <rect x="250" y="340" width="150" height="80" rx="10" fill="#34495e" stroke="#9fb3c8" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="325" y="374" text-anchor="middle" font-size="15" fill="#fff" font-weight="700">Labelled data</text>
+  <text x="325" y="398" text-anchor="middle" font-size="12" fill="#9fb3c8">Multilingual</text>
+  <path d="M400 380 H460" stroke="#9fb3c8" stroke-width="2.5" fill="none"/>
+  <polygon points="460,380 450,374 450,386" fill="#9fb3c8"/>
+  <path d="M535 340 V260" stroke="#9fb3c8" stroke-width="2.5" fill="none" stroke-dasharray="6 4"/>
+  <polygon points="535,260 529,270 541,270" fill="#9fb3c8"/>
+
+  <text x="400" y="465" text-anchor="middle" font-size="14" fill="#9fb3c8">Redrawn for illustration. No client data or internal details.</text>
+</svg>

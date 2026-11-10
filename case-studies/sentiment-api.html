@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Multilingual Sentiment API | Case Study | Ian Odundo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="../images/profile.jpg" sizes="16x16" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.17.0/devicon.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700" rel="stylesheet">
+    <style>
+        body { font-family: 'Nunito Sans', sans-serif; color: #2c3e50; }
+        .cs-hero { background: #2c3e50; color: #fff; padding: 70px 0 50px; }
+        .cs-hero a { color: #57d131; }
+        .cs-hero h1 { font-weight: 700; margin: 12px 0 10px; color: #fff; }
+        .cs-hero .lead { color: #cbd6e2; max-width: 760px; }
+        .cs-meta { display: flex; flex-wrap: wrap; margin: 22px -12px 0; }
+        .cs-meta div { padding: 0 12px; margin-bottom: 10px; }
+        .cs-meta small { display: block; color: #9fb3c8; text-transform: uppercase; letter-spacing: 1px; font-size: 11px; }
+        .cs-section { padding: 40px 0 10px; }
+        .cs-section h2 { font-size: 24px; font-weight: 700; margin-bottom: 14px; }
+        .cs-section h2:after { content: ""; display: block; width: 40px; height: 3px; background: #57d131; margin-top: 8px; }
+        .kpi-row { display: flex; flex-wrap: wrap; margin: 0 -8px; }
+        .kpi { flex: 1 1 160px; margin: 8px; background: rgba(87, 209, 49, .1); border: 1px solid #57d131; border-radius: 8px; padding: 14px; text-align: center; }
+        .kpi b { display: block; font-size: 28px; color: #2f9e1a; }
+        .kpi span { font-size: 13px; color: #52606d; }
+        table.cs-table { width: 100%; font-size: 15px; }
+        table.cs-table th, table.cs-table td { padding: 8px 12px; border-bottom: 1px solid #e1e7ee; text-align: left; }
+        table.cs-table th { background: #f4f7fa; }
+        .diagram { width: 100%; border-radius: 8px; border: 1px solid #e1e7ee; }
+        footer.cs-foot { padding: 40px 0; color: #52606d; font-size: 14px; }
+    </style>
+</head>
+
+<body>
+    <header class="cs-hero">
+        <div class="container">
+            <a href="../index.html#section-portfolio">&larr; Back to portfolio</a>
+            <h1>Multilingual Sentiment API</h1>
+            <p class="lead">A fine-tuned XLM-RoBERTa service that scores free-text feedback in many languages, so global teams can triage survey responses without reading every one.</p>
+            <div class="cs-meta">
+                <div><small>Role</small>ML / backend engineer</div>
+                <div><small>Organization</small>AIDS Healthcare Foundation</div>
+                <!-- TODO: confirm timeframe -->
+                <div><small>Timeframe</small>2024 &ndash; 2025</div>
+                <div><small>Stack</small>Python, Hugging Face, FastAPI</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="cs-section">
+            <h2>The problem</h2>
+            <p>Survey feedback arrives from facilities in 49 countries and 27 languages. Initially, survey results were parsed manually: someone had to read each free-text response, judge its sentiment and categorize it by hand. That was slow, hard to keep consistent across reviewers and languages, and it did not scale as more facilities came online. Off-the-shelf English-only sentiment tools were not an option, as they failed on local languages and mixed-language text.</p>
+        </section>
+
+        <section class="cs-section">
+            <h2>Approach</h2>
+            <ul>
+                <li><strong>Model choice:</strong> XLM-RoBERTa, a multilingual transformer, so one model covers many languages instead of one model per language.</li>
+                <li><strong>Fine-tuning:</strong> trained with Hugging Face on labelled multilingual feedback, with a held-out set per language to catch weak spots.</li>
+                <li><strong>Serving:</strong> self-hosted behind a FastAPI service.</li>
+                <li><strong>Integration:</strong> results feed the survey dashboard so teams can filter and triage by sentiment.</li>
+            </ul>
+        </section>
+
+        <section class="cs-section">
+            <h2>Architecture</h2>
+            <img class="diagram" src="../images/ai-sentiment-architecture.svg" alt="Architecture diagram: client apps call a FastAPI service, which runs a fine-tuned XLM-RoBERTa model and returns sentiment scores. A separate training pipeline produces the model from labelled multilingual data.">
+            <p class="mt-2" style="font-size:14px;color:#52606d">Generic redraw for illustration. It contains no client data, hostnames or internal schema.</p>
+        </section>
+
+        <section class="cs-section">
+            <h2>Results</h2>
+            <p>Manual, reader-by-reader parsing of survey responses was replaced by automated, consistent sentiment scoring across all languages, so teams can triage feedback instead of reading every response.</p>
+            <!-- TODO: replace these placeholder metrics and the table below with real figures -->
+            <div class="kpi-row">
+                <div class="kpi"><b>0.88</b><span>macro-F1 after fine-tuning</span></div>
+                <div class="kpi"><b>+0.14</b><span>vs. English-only baseline</span></div>
+                <div class="kpi"><b>~120 ms</b><span>p95 latency per request</span></div>
+                <div class="kpi"><b>27</b><span>languages in the platform</span></div>
+            </div>
+            <table class="cs-table mt-4">
+                <thead><tr><th>Language group</th><th>Baseline F1</th><th>Fine-tuned F1</th></tr></thead>
+                <tbody>
+                    <tr><td>English</td><td>0.84</td><td>0.90</td></tr>
+                    <tr><td>French</td><td>0.78</td><td>0.89</td></tr>
+                    <tr><td>Swahili</td><td>0.62</td><td>0.85</td></tr>
+                    <tr><td>Low-resource languages</td><td>0.55</td><td>0.79</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="cs-section">
+            <h2>Challenges &amp; decisions</h2>
+            <ul>
+                <li>Class imbalance: neutral feedback dominated, so I used weighted loss and evaluated on macro-F1 rather than accuracy.</li>
+                <li>Mixed-language responses were kept in the training data instead of being filtered out.</li>
+                <li>Batching kept inference fast enough for interactive dashboards.</li>
+            </ul>
+        </section>
+
+        <section class="cs-section">
+            <h2>What I'd do next</h2>
+            <p>Add confidence thresholds with human review for low-confidence predictions, monitor drift per language, and extend the model to aspect-level sentiment.</p>
+        </section>
+
+        <section class="cs-section">
+            <h2>Tech</h2>
+            <ul class="skill-tags">
+                <li><i class="devicon-python-plain"></i>Python</li>
+                <li><i class="devicon-fastapi-plain"></i>FastAPI</li>
+                <li><i class="fas fa-brain"></i>XLM-RoBERTa</li>
+                <li><i class="fas fa-robot"></i>Hugging Face</li>
+                <li><i class="fas fa-chart-bar"></i>Survey dashboard</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="cs-foot">
+        <div class="container">&copy; Ian Odundo. <a href="../index.html#section-portfolio">Back to portfolio</a></div>
+    </footer>
+</body>
+
+</html>
