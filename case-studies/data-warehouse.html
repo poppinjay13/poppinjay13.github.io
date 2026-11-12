@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Global Data Warehouse &amp; SQL Server Migration | Case Study | Ian Odundo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="../images/profile.jpg" sizes="16x16" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.17.0/devicon.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700" rel="stylesheet">
+    <style>
+        body { font-family: 'Nunito Sans', sans-serif; color: #2c3e50; }
+        .cs-hero { background: #2c3e50; color: #fff; padding: 70px 0 50px; }
+        .cs-hero a { color: #57d131; }
+        .cs-hero h1 { font-weight: 700; margin: 12px 0 10px; color: #fff; }
+        .cs-hero .lead { color: #cbd6e2; max-width: 760px; }
+        .cs-meta { display: flex; flex-wrap: wrap; margin: 22px -12px 0; }
+        .cs-meta div { padding: 0 12px; margin-bottom: 10px; }
+        .cs-meta small { display: block; color: #9fb3c8; text-transform: uppercase; letter-spacing: 1px; font-size: 11px; }
+        .cs-section { padding: 40px 0 10px; }
+        .cs-section h2 { font-size: 24px; font-weight: 700; margin-bottom: 14px; }
+        .cs-section h2:after { content: ""; display: block; width: 40px; height: 3px; background: #57d131; margin-top: 8px; }
+        .kpi-row { display: flex; flex-wrap: wrap; margin: 0 -8px; }
+        .kpi { flex: 1 1 160px; margin: 8px; background: rgba(87, 209, 49, .1); border: 1px solid #57d131; border-radius: 8px; padding: 14px; text-align: center; }
+        .kpi b { display: block; font-size: 28px; color: #2f9e1a; }
+        .kpi span { font-size: 13px; color: #52606d; }
+        .diagram { width: 100%; border-radius: 8px; border: 1px solid #e1e7ee; }
+        footer.cs-foot { padding: 40px 0; color: #52606d; font-size: 14px; }
+    </style>
+</head>
+
+<body>
+    <header class="cs-hero">
+        <div class="container">
+            <a href="../index.html#section-portfolio">&larr; Back to portfolio</a>
+            <h1>Global Data Warehouse &amp; SQL Server Migration</h1>
+            <p class="lead">A SQL Server data warehouse and migration that brings health-facility data and survey feedback from many countries into one consistent, queryable source for dashboards and reporting.</p>
+            <div class="cs-meta">
+                <div><small>Role</small>Data / backend engineer, migration lead</div>
+                <div><small>Organization</small>AIDS Healthcare Foundation</div>
+                <!-- TODO: confirm timeframe -->
+                <div><small>Timeframe</small>2024 &ndash; 2025</div>
+                <div><small>Stack</small>SQL Server, T-SQL, ASP.NET / C#</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="cs-section">
+            <h2>The problem</h2>
+            <!-- TODO: confirm what the source systems were and what the pain points were -->
+            <p>Operations span 49 countries and about 1,300 facilities, and each team needed reliable numbers. Data lived in separate systems with different structures, which made cross-country reporting slow and hard to trust. Survey results added another stream, collected in 27 languages and, at first, parsed by hand.</p>
+        </section>
+
+        <section class="cs-section">
+            <h2>Approach</h2>
+            <ul>
+                <li><strong>One warehouse:</strong> built the SQL Server data warehouse as the shared source for reporting and analytics.</li>
+                <li><strong>Led the migration:</strong> planned and led the move to SQL Server, including schema changes, stored procedures and views written in T-SQL.</li>
+                <li><strong>Serve the apps:</strong> exposed the data to dashboards and ASP.NET / C# APIs, so web and mobile applications read from one consistent layer.</li>
+                <li><strong>Automate reporting:</strong> replaced manual data triage and report assembly with repeatable, scheduled processes.</li>
+            </ul>
+        </section>
+
+        <section class="cs-section">
+            <h2>Architecture</h2>
+            <img class="diagram" src="../images/ai-datawarehouse-architecture.svg" alt="Architecture diagram: facility systems, country databases and survey responses load into a staging area, then into a SQL Server warehouse built from stored procedures, views and schemas, which feeds dashboards, reports, and applications and APIs.">
+            <p class="mt-2" style="font-size:14px;color:#52606d">Generic redraw for illustration. It contains no client data, hostnames or internal schema.</p>
+        </section>
+
+        <section class="cs-section">
+            <h2>Scale &amp; outcome</h2>
+            <div class="kpi-row">
+                <div class="kpi"><b>49</b><span>countries</span></div>
+                <div class="kpi"><b>~1,300</b><span>facilities</span></div>
+                <div class="kpi"><b>27</b><span>languages</span></div>
+                <div class="kpi"><b>~2,000</b><span>active users</span></div>
+            </div>
+            <p class="mt-3">The warehouse gave teams a single, consistent view of facility and survey data. Reports that once depended on manual assembly now draw on the same tested queries, and the survey dashboard and sentiment API plug into the same data.</p>
+        </section>
+
+        <section class="cs-section">
+            <h2>Challenges &amp; decisions</h2>
+            <!-- TODO: confirm or replace with the real challenges you faced -->
+            <ul>
+                <li><strong>Migrating without disruption:</strong> staged the move so live applications kept working while schemas and procedures changed.</li>
+                <li><strong>One schema, many countries:</strong> designed shared structures that handle different local data and 27 languages.</li>
+                <li><strong>Trust in the numbers:</strong> pushed business logic into versioned stored procedures and views so every report uses the same definitions.</li>
+            </ul>
+        </section>
+
+        <section class="cs-section">
+            <h2>What I'd do next</h2>
+            <!-- TODO: confirm or replace -->
+            <p>Add automated data-quality checks and alerting, incremental loads for faster refresh, and row-level access control by country.</p>
+        </section>
+
+        <section class="cs-section">
+            <h2>Tech</h2>
+            <ul class="skill-tags">
+                <li><i class="devicon-microsoftsqlserver-plain"></i>SQL Server / T-SQL</li>
+                <li><i class="fas fa-warehouse"></i>Data Warehousing</li>
+                <li><i class="devicon-dot-net-plain"></i>ASP.NET / C#</li>
+                <li><i class="fas fa-chart-bar"></i>Dashboards</li>
+                <li><i class="fas fa-filter"></i>Data Triage &amp; Reporting</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="cs-foot">
+        <div class="container">&copy; Ian Odundo. <a href="../index.html#section-portfolio">Back to portfolio</a></div>
+    </footer>
+</body>
+
+</html>

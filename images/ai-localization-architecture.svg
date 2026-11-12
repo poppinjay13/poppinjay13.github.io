@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Nunito Sans, Segoe UI, Arial, sans-serif">
+  <rect width="800" height="500" fill="#2c3e50"/>
+  <text x="400" y="62" text-anchor="middle" font-size="30" font-weight="700" fill="#fff">Localization System</text>
+  <text x="400" y="94" text-anchor="middle" font-size="16" fill="#9fb3c8">Architecture overview (generic)</text>
+
+  <!-- translators -->
+  <rect x="30" y="180" width="150" height="90" rx="10" fill="#34495e" stroke="#9fb3c8" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="105" y="218" text-anchor="middle" font-size="16" fill="#fff" font-weight="700">Translators</text>
+  <text x="105" y="242" text-anchor="middle" font-size="13" fill="#9fb3c8">27 languages</text>
+
+  <!-- store -->
+  <rect x="240" y="170" width="150" height="110" rx="10" fill="#34495e" stroke="#57d131" stroke-width="2"/>
+  <text x="315" y="212" text-anchor="middle" font-size="16" fill="#fff" font-weight="700">Translation</text>
+  <text x="315" y="234" text-anchor="middle" font-size="16" fill="#fff" font-weight="700">store</text>
+  <text x="315" y="258" text-anchor="middle" font-size="12" fill="#9fb3c8">Keys + fallbacks</text>
+
+  <!-- service -->
+  <rect x="450" y="170" width="150" height="110" rx="10" fill="#57d131"/>
+  <text x="525" y="212" text-anchor="middle" font-size="16" fill="#1b2a1b" font-weight="700">Localization</text>
+  <text x="525" y="234" text-anchor="middle" font-size="16" fill="#1b2a1b" font-weight="700">API</text>
+  <text x="525" y="258" text-anchor="middle" font-size="12" fill="#1b2a1b">ASP.NET / C#</text>
+
+  <!-- clients -->
+  <rect x="635" y="150" width="140" height="46" rx="8" fill="#34495e" stroke="#57d131" stroke-width="2"/>
+  <text x="705" y="179" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">Web (React / Vue)</text>
+  <rect x="635" y="212" width="140" height="46" rx="8" fill="#34495e" stroke="#57d131" stroke-width="2"/>
+  <text x="705" y="241" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">Mobile (Flutter)</text>
+  <rect x="635" y="274" width="140" height="46" rx="8" fill="#34495e" stroke="#57d131" stroke-width="2"/>
+  <text x="705" y="303" text-anchor="middle" font-size="14" fill="#fff" font-weight="700">Reports</text>
+
+  <g stroke="#57d131" stroke-width="3" fill="none">
+    <path d="M180 225 H240"/><path d="M390 225 H450"/>
+    <path d="M600 225 H625"/><path d="M625 173 H635"/><path d="M625 235 H635"/><path d="M625 297 H635"/><path d="M625 173 V297"/>
+  </g>
+  <g fill="#57d131">
+    <polygon points="240,225 230,219 230,231"/><polygon points="450,225 440,219 440,231"/>
+    <polygon points="635,173 625,167 625,179"/><polygon points="635,235 625,229 625,241"/><polygon points="635,297 625,291 625,303"/>
+  </g>
+
+  <text x="400" y="465" text-anchor="middle" font-size="14" fill="#9fb3c8">Redrawn for illustration. No client data or internal details.</text>
+</svg>

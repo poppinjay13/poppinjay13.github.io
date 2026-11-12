@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Localization System | Case Study | Ian Odundo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="../images/profile.jpg" sizes="16x16" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.17.0/devicon.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700" rel="stylesheet">
+    <style>
+        body { font-family: 'Nunito Sans', sans-serif; color: #2c3e50; }
+        .cs-hero { background: #2c3e50; color: #fff; padding: 70px 0 50px; }
+        .cs-hero a { color: #57d131; }
+        .cs-hero h1 { font-weight: 700; margin: 12px 0 10px; color: #fff; }
+        .cs-hero .lead { color: #cbd6e2; max-width: 760px; }
+        .cs-meta { display: flex; flex-wrap: wrap; margin: 22px -12px 0; }
+        .cs-meta div { padding: 0 12px; margin-bottom: 10px; }
+        .cs-meta small { display: block; color: #9fb3c8; text-transform: uppercase; letter-spacing: 1px; font-size: 11px; }
+        .cs-section { padding: 40px 0 10px; }
+        .cs-section h2 { font-size: 24px; font-weight: 700; margin-bottom: 14px; }
+        .cs-section h2:after { content: ""; display: block; width: 40px; height: 3px; background: #57d131; margin-top: 8px; }
+        .kpi-row { display: flex; flex-wrap: wrap; margin: 0 -8px; }
+        .kpi { flex: 1 1 160px; margin: 8px; background: rgba(87, 209, 49, .1); border: 1px solid #57d131; border-radius: 8px; padding: 14px; text-align: center; }
+        .kpi b { display: block; font-size: 28px; color: #2f9e1a; }
+        .kpi span { font-size: 13px; color: #52606d; }
+        .diagram { width: 100%; border-radius: 8px; border: 1px solid #e1e7ee; }
+        footer.cs-foot { padding: 40px 0; color: #52606d; font-size: 14px; }
+    </style>
+</head>
+
+<body>
+    <header class="cs-hero">
+        <div class="container">
+            <a href="../index.html#section-portfolio">&larr; Back to portfolio</a>
+            <h1>Localization System</h1>
+            <p class="lead">A localization system that lets one set of applications speak 27 languages, so staff in 49 countries use the same tools in the language they work in.</p>
+            <div class="cs-meta">
+                <div><small>Role</small>Full-stack engineer &amp; UI/UX</div>
+                <div><small>Organization</small>AIDS Healthcare Foundation</div>
+                <!-- TODO: confirm timeframe -->
+                <div><small>Timeframe</small>2024 &ndash; 2025</div>
+                <div><small>Stack</small>ASP.NET / C#, SQL Server, React, Vue, Flutter</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="cs-section">
+            <h2>The problem</h2>
+            <!-- TODO: confirm how text was handled before (hard-coded strings, per-app translations, etc.) -->
+            <p>The organization's health information systems are used by about 2,000 people across 49 countries and about 1,300 facilities, working in many different languages. Interfaces in a single language created friction for users and risked data-entry errors, and managing translations separately in each application would not scale.</p>
+        </section>
+
+        <section class="cs-section">
+            <h2>Approach</h2>
+            <!-- TODO: confirm how translations are stored and served -->
+            <ul>
+                <li><strong>One system for every app:</strong> built a central localization layer so web (React, Vue) and mobile (Flutter) apps share the same translations instead of each keeping its own.</li>
+                <li><strong>27 languages:</strong> text is stored as keys with a translation per language and a fallback when one is missing, so an untranslated string never leaves a blank screen.</li>
+                <li><strong>Served from the backend:</strong> ASP.NET / C# APIs backed by SQL Server deliver the right language for each user.</li>
+                <li><strong>Designed for it:</strong> responsive layouts and accessible components that cope with longer text and different scripts.</li>
+            </ul>
+        </section>
+
+        <section class="cs-section">
+            <h2>Architecture</h2>
+            <img class="diagram" src="../images/ai-localization-architecture.svg" alt="Architecture diagram: translators contribute to a translation store of keys and fallbacks, which a localization API built with ASP.NET and C# serves to web apps built in React and Vue, mobile apps built in Flutter, and reports.">
+            <p class="mt-2" style="font-size:14px;color:#52606d">Generic redraw for illustration. It contains no client data, hostnames or internal schema.</p>
+        </section>
+
+        <section class="cs-section">
+            <h2>Scale &amp; outcome</h2>
+            <div class="kpi-row">
+                <div class="kpi"><b>27</b><span>languages</span></div>
+                <div class="kpi"><b>49</b><span>countries</span></div>
+                <div class="kpi"><b>~1,300</b><span>facilities</span></div>
+                <div class="kpi"><b>~2,000</b><span>active users</span></div>
+            </div>
+            <p class="mt-3">Users get the applications in their own language, and new languages or screens are added in one place rather than in every app.</p>
+        </section>
+
+        <section class="cs-section">
+            <h2>Challenges &amp; decisions</h2>
+            <!-- TODO: confirm or replace with the real challenges you faced -->
+            <ul>
+                <li><strong>Consistent terminology:</strong> kept health and reporting terms identical across languages and apps.</li>
+                <li><strong>Layouts that flex:</strong> translations vary a lot in length, so screens were built to adapt instead of assuming English text widths.</li>
+                <li><strong>Graceful gaps:</strong> a fallback language keeps apps usable while a translation is still being completed.</li>
+            </ul>
+        </section>
+
+        <section class="cs-section">
+            <h2>What I'd do next</h2>
+            <!-- TODO: confirm or replace -->
+            <p>Add a translator-friendly editing interface with review workflow, automated checks for missing or mismatched keys, and machine-translation suggestions that a human reviews.</p>
+        </section>
+
+        <section class="cs-section">
+            <h2>Tech</h2>
+            <ul class="skill-tags">
+                <li><i class="fas fa-globe"></i>Localization (i18n)</li>
+                <li><i class="devicon-dot-net-plain"></i>ASP.NET / C#</li>
+                <li><i class="devicon-microsoftsqlserver-plain"></i>SQL Server</li>
+                <li><i class="devicon-react-original"></i>React</li>
+                <li><i class="devicon-vuejs-plain"></i>Vue.js</li>
+                <li><i class="devicon-flutter-plain"></i>Flutter</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="cs-foot">
+        <div class="container">&copy; Ian Odundo. <a href="../index.html#section-portfolio">Back to portfolio</a></div>
+    </footer>
+</body>
+
+</html>

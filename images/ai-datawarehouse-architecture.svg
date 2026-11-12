@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Nunito Sans, Segoe UI, Arial, sans-serif">
+  <rect width="800" height="500" fill="#2c3e50"/>
+  <text x="400" y="62" text-anchor="middle" font-size="30" font-weight="700" fill="#fff">Global Data Warehouse</text>
+  <text x="400" y="94" text-anchor="middle" font-size="16" fill="#9fb3c8">Architecture overview (generic)</text>
+
+  <!-- sources -->
+  <rect x="30" y="150" width="150" height="46" rx="8" fill="#34495e" stroke="#9fb3c8" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="105" y="179" text-anchor="middle" font-size="14" fill="#fff" font-weight="700">Facility systems</text>
+  <rect x="30" y="212" width="150" height="46" rx="8" fill="#34495e" stroke="#9fb3c8" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="105" y="241" text-anchor="middle" font-size="14" fill="#fff" font-weight="700">Country databases</text>
+  <rect x="30" y="274" width="150" height="46" rx="8" fill="#34495e" stroke="#9fb3c8" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="105" y="303" text-anchor="middle" font-size="14" fill="#fff" font-weight="700">Survey responses</text>
+
+  <!-- staging -->
+  <rect x="240" y="180" width="130" height="110" rx="10" fill="#34495e" stroke="#57d131" stroke-width="2"/>
+  <text x="305" y="228" text-anchor="middle" font-size="16" fill="#fff" font-weight="700">Staging</text>
+  <text x="305" y="252" text-anchor="middle" font-size="12" fill="#9fb3c8">Load + validate</text>
+
+  <!-- warehouse -->
+  <rect x="420" y="160" width="160" height="150" rx="10" fill="#57d131"/>
+  <text x="500" y="205" text-anchor="middle" font-size="16" fill="#1b2a1b" font-weight="700">SQL Server</text>
+  <text x="500" y="228" text-anchor="middle" font-size="14" fill="#1b2a1b" font-weight="700">Warehouse</text>
+  <text x="500" y="256" text-anchor="middle" font-size="12" fill="#1b2a1b">Stored procedures</text>
+  <text x="500" y="274" text-anchor="middle" font-size="12" fill="#1b2a1b">Views &amp; schemas</text>
+
+  <!-- consumers -->
+  <rect x="630" y="150" width="140" height="46" rx="8" fill="#34495e" stroke="#57d131" stroke-width="2"/>
+  <text x="700" y="179" text-anchor="middle" font-size="14" fill="#fff" font-weight="700">Dashboards</text>
+  <rect x="630" y="212" width="140" height="46" rx="8" fill="#34495e" stroke="#57d131" stroke-width="2"/>
+  <text x="700" y="241" text-anchor="middle" font-size="14" fill="#fff" font-weight="700">Reports</text>
+  <rect x="630" y="274" width="140" height="46" rx="8" fill="#34495e" stroke="#57d131" stroke-width="2"/>
+  <text x="700" y="303" text-anchor="middle" font-size="14" fill="#fff" font-weight="700">Apps &amp; APIs</text>
+
+  <g stroke="#57d131" stroke-width="3" fill="none">
+    <path d="M180 173 H210 V235 H240"/><path d="M180 235 H240"/><path d="M180 297 H210 V235"/>
+    <path d="M370 235 H420"/>
+    <path d="M580 235 H605"/><path d="M605 173 H630"/><path d="M605 235 H630"/><path d="M605 297 H630"/><path d="M605 173 V297"/>
+  </g>
+  <g fill="#57d131">
+    <polygon points="240,235 230,229 230,241"/><polygon points="420,235 410,229 410,241"/>
+    <polygon points="630,173 620,167 620,179"/><polygon points="630,235 620,229 620,241"/><polygon points="630,297 620,291 620,303"/>
+  </g>
+
+  <text x="400" y="465" text-anchor="middle" font-size="14" fill="#9fb3c8">Redrawn for illustration. No client data or internal details.</text>
+</svg>
