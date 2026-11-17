@@ -3,6 +3,10 @@
   <text x="400" y="62" text-anchor="middle" font-size="30" font-weight="700" fill="#fff">Multilingual Sentiment API</text>
   <text x="400" y="94" text-anchor="middle" font-size="16" fill="#9fb3c8">Architecture overview (generic)</text>
 
+  <!-- Azure boundary -->
+  <rect x="238" y="122" width="384" height="158" rx="14" fill="none" stroke="#9fb3c8" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="250" y="146" font-size="13" fill="#9fb3c8">Azure: App Service + Functions</text>
+
   <!-- client apps -->
   <rect x="40" y="170" width="150" height="90" rx="10" fill="#34495e" stroke="#57d131" stroke-width="2"/>
   <text x="115" y="208" text-anchor="middle" font-size="16" fill="#fff" font-weight="700">Client apps</text>

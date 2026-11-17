@@ -315,7 +315,17 @@
               masonry: {
                 columnWidth: ".all"
               }
-            })
+            });
+
+            // Re-layout as images load so cards don't overlap on first (uncached) load
+            if ($.fn.imagesLoaded) {
+              $grid.imagesLoaded().progress(function() {
+                $grid.isotope("layout");
+              });
+            }
+            $(window).on("load", function() {
+              $grid.isotope("layout");
+            });
       };
 
 

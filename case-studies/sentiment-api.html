@@ -46,7 +46,7 @@
                 <div><small>Organization</small>AIDS Healthcare Foundation</div>
                 <!-- TODO: confirm timeframe -->
                 <div><small>Timeframe</small>2024 &ndash; 2025</div>
-                <div><small>Stack</small>Python, Hugging Face, FastAPI</div>
+                <div><small>Stack</small>Python, Hugging Face, FastAPI, Azure</div>
             </div>
         </div>
     </header>
@@ -63,7 +63,7 @@
             <ul>
                 <li><strong>Model choice:</strong> XLM-RoBERTa, a multilingual transformer, so one model covers many languages instead of one model per language.</li>
                 <li><strong>Fine-tuning:</strong> trained with Hugging Face on labelled multilingual feedback, with a held-out set per language to catch weak spots.</li>
-                <li><strong>Serving:</strong> self-hosted behind a FastAPI service.</li>
+                <li><strong>Serving:</strong> self-hosted behind a FastAPI service, deployed on Azure using App Service and Azure Functions.</li>
                 <li><strong>Integration:</strong> results feed the survey dashboard so teams can filter and triage by sentiment.</li>
             </ul>
         </section>
@@ -116,6 +116,8 @@
                 <li><i class="devicon-fastapi-plain"></i>FastAPI</li>
                 <li><i class="fas fa-brain"></i>XLM-RoBERTa</li>
                 <li><i class="fas fa-robot"></i>Hugging Face</li>
+                <li><i class="devicon-azure-plain"></i>Azure App Service</li>
+                <li><i class="devicon-azure-plain"></i>Azure Functions</li>
                 <li><i class="fas fa-chart-bar"></i>Survey dashboard</li>
             </ul>
         </section>
