@@ -63,7 +63,7 @@
             <ul>
                 <li><strong>Model choice:</strong> XLM-RoBERTa, a multilingual transformer, so one model covers many languages instead of one model per language.</li>
                 <li><strong>Fine-tuning:</strong> trained with Hugging Face on labelled multilingual feedback, with a held-out set per language to catch weak spots.</li>
-                <li><strong>Serving:</strong> self-hosted behind a FastAPI service, deployed on Azure using App Service and Azure Functions.</li>
+                <li><strong>Serving:</strong> self-hosted behind a FastAPI service, deployed on Azure: App Service hosts the API, and Azure Functions run scheduled batch scoring.</li>
                 <li><strong>Integration:</strong> results feed the survey dashboard so teams can filter and triage by sentiment.</li>
             </ul>
         </section>
